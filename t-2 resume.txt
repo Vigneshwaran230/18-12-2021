@@ -1,0 +1,102 @@
+1)For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+var obj = {
+  name: "vignesh",
+  age: 25,
+  gender: "Male",
+  cars: ["Honda", "Altroz"]
+};
+//For....in loop for given JSON
+
+for (key in obj) {
+  console.log(key, obj[key]);
+}
+
+o/p:
+"name" "vignesh"
+"age" 25
+"gender" "Male"
+"cars" // [object Array] (2)
+["Honda","Altroz"]
+
+//For....of loop for given JSON
+
+for (var item of Object.values(obj)){
+  console.log(item)
+}
+
+o/p:
+
+"vignesh"
+25
+"Male"
+// [object Array] (2)
+["Honda","Altroz"]
+
+
+//For loop for given JSON
+for (let i = 0; i < obj.cars.length; i++) {
+  console.log(obj.cars[i]);
+}
+
+o/p:
+"Honda"
+"Altroz"
+
+//ForEach loop for given JSON
+
+o/p:"Honda"
+"Altroz"
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2)Create your own resume data in JSON format
+
+{
+  "basics": {
+    "name": "Vigneshwaran S",
+    "label": "Programmer",
+    "email": "svigneshwaran230@gmail.com",
+    "phone": "(+91)7200035447",
+    "summary": "Good and hardowrking passionte to work in web development",
+    "location": {
+      "address": "vaigai block",
+      "postalCode": "620003",
+      "city": "Thiruchirapalli",
+      "countryCode": "IN",
+      "region": "TamilNadu"
+    }
+  },
+  "work": [{
+    "company": "TCS",
+    "position": "System Engineer",
+    "website": "https://www.tcs.com/",
+    "startDate": "2018-10-04",
+    "endDate": "Till Date",
+    "summary": "Working as the system engineer and has great passinate to my work",
+  }],
+  "education": [{
+    "institution": "SRM University",
+    "area": "Electronics and communication",
+    "studyType": "Bachelor",
+    "startDate": "2014-06-01",
+    "endDate": "2018-06-01",
+    "gpa": "9.0",
+  }],
+  "skills": [{
+    "name": "Web Development",
+    "level": "Intermediate",
+    "keywords": ["HTML","CSS","Javascript"]
+  }],
+"languages": [{
+    "language": "English, Tamil",
+    "fluency": "Could Read Write and Speak"
+  }],
+  "interests": [{
+    "name": "Riding",
+    "keywords": [
+      "Horse",
+      "Bike"
+    ]
+  }],
+}
